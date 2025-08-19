@@ -85,9 +85,41 @@ console.log(fruitsNew);*/
 
 //indexOf
 
-const fruits = ["apple", "orange", "banana"];
+/*const fruits = ["apple", "orange", "banana"];
 const index = fruits.indexOf("orange");
 console.log(index);
 
 const hasApple = fruits.includes("apple");
-console.log(hasApple);
+console.log(hasApple);*/
+
+//sort - reverse
+
+const numbers = [5, 8, 0, 3];
+numbers.sort();
+//console.log(numbers);
+
+const fruits = ["Banana", "orange", "apple"];
+//fruits.sort();
+
+fruits.sort((a, b) => a.localeCompare(b));
+console.log(fruits);
+
+const items = ["item1", "item2222", "item33", "item555"];
+items.sort((a, b) => a.length - b.length);
+console.log(items);
+
+const dates = [
+  { date: "2023-07-15" },
+  { date: "2024-07-15" },
+  { date: "2022-07-15" },
+];
+function compareDate(a, b) {
+  const dateA = new Date(a.date);
+  const dateB = new Date(b.date);
+  return dateA - dateB;
+}
+dates.sort(compareDate);
+console.log(dates);
+
+const reverseFruits = fruits.reverse();
+console.log(reverseFruits);
