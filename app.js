@@ -62,7 +62,16 @@ console.log(fruits);
 
 //concat
 
-const num1 = [1, 2, 3];
+/*const num1 = [1, 2, 3];
 const num2 = [4, 5, 6];
 const combinedNumbers = num1.concat(num2);
-console.log(combinedNumbers);
+console.log(combinedNumbers);*/
+
+//flat
+
+const nestedArray = [1, [2, 3], [8, 9]];
+let flatedArray = nestedArray.flat(1);
+console.log(flatedArray);
+const nestedArray2 = [1, [2, 3], [8, [100, 200]]];
+const flatedArray2 = nestedArray2.flat(2);
+console.log(flatedArray2);
