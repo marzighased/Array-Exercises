@@ -94,7 +94,7 @@ console.log(hasApple);*/
 
 //sort - reverse
 
-const numbers = [5, 8, 0, 3];
+/*const numbers = [5, 8, 0, 3];
 numbers.sort();
 //console.log(numbers);
 
@@ -122,4 +122,16 @@ dates.sort(compareDate);
 console.log(dates);
 
 const reverseFruits = fruits.reverse();
-console.log(reverseFruits);
+console.log(reverseFruits);*/
+
+//spread
+
+const numbers = [5, 8, 0, 3];
+
+/*for (let i=0; i<numbers.length; i++){
+    console.log(numbers[i])
+} */
+
+console.log(...numbers);
+const str = "hello";
+console.log(...str);
