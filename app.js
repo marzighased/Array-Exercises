@@ -69,9 +69,16 @@ console.log(combinedNumbers);*/
 
 //flat
 
-const nestedArray = [1, [2, 3], [8, 9]];
+/*const nestedArray = [1, [2, 3], [8, 9]];
 let flatedArray = nestedArray.flat(1);
 console.log(flatedArray);
 const nestedArray2 = [1, [2, 3], [8, [100, 200]]];
 const flatedArray2 = nestedArray2.flat(2);
-console.log(flatedArray2);
+console.log(flatedArray2);*/
+
+//join
+
+const fruits = ["apple", "orange", "banana"];
+const fruitsNew = fruits.join('-');
+console.log(fruits);
+console.log(fruitsNew);
