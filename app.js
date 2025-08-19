@@ -132,6 +132,37 @@ const numbers = [5, 8, 0, 3];
     console.log(numbers[i])
 } */
 
-console.log(...numbers);
+//console.log(...numbers);
 const str = "hello";
-console.log(...str);
+//console.log(...str);
+
+//shallow copy
+
+let copyNumbers = [...numbers];
+//console.log(copyNumbers);
+copyNumbers.push(77);
+//console.log(numbers);
+//console.log(copyNumbers);
+
+const arr1 = [1, 2, 3];
+const arr2 = [3, 4];
+const newArr = [...arr1, ...arr2];
+const newArr2 = [10, ...arr1, 20];
+
+console.log(newArr);
+console.log(newArr2);
+
+function sum(a, b, c) {
+  return a + b + c;
+}
+
+console.log(sum(arr1[0], arr1[1], arr1[2]));
+console.log(sum(...arr1));
+
+//deep copy
+
+const nestedArray = [[1, 2],[3, 4]];
+const copyNestedArray = JSON.parse(JSON.stringify(nestedArray));
+copyNestedArray[0][0] = 99;
+console.log(copyNestedArray);
+console.log(nestedArray)
