@@ -126,25 +126,25 @@ console.log(reverseFruits);*/
 
 //spread
 
-const numbers = [5, 8, 0, 3];
+//const numbers = [5, 8, 0, 3];
 
 /*for (let i=0; i<numbers.length; i++){
     console.log(numbers[i])
 } */
 
 //console.log(...numbers);
-const str = "hello";
+//const str = "hello";
 //console.log(...str);
 
 //shallow copy
 
-let copyNumbers = [...numbers];
+//let copyNumbers = [...numbers];
 //console.log(copyNumbers);
-copyNumbers.push(77);
+//copyNumbers.push(77);
 //console.log(numbers);
 //console.log(copyNumbers);
 
-const arr1 = [1, 2, 3];
+/*const arr1 = [1, 2, 3];
 const arr2 = [3, 4];
 const newArr = [...arr1, ...arr2];
 const newArr2 = [10, ...arr1, 20];
@@ -165,4 +165,11 @@ const nestedArray = [[1, 2],[3, 4]];
 const copyNestedArray = JSON.parse(JSON.stringify(nestedArray));
 copyNestedArray[0][0] = 99;
 console.log(copyNestedArray);
-console.log(nestedArray)
+console.log(nestedArray)*/
+
+// Array Destructuring
+
+const arr1= [1,2,3]
+const [a,b,c] = arr1;
+console.log(a)
+console.log(c)
