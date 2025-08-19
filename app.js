@@ -43,7 +43,7 @@ console.log(fruits);
 
 //splice - slice
 
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+//const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 //array.slice(start,end)
 
@@ -51,11 +51,18 @@ const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 //const slicedNumbers2 = numbers.slice(2);
 
 //console.log(slicedNumbers2);
-console.log(numbers);
+//console.log(numbers);
 
 //array.splice(start, deleteCount, item1, ..., itemN)
 
 //numbers.splice(4, 3);
-numbers.splice(4, 3, 101, 102, 103);
+//numbers.splice(4, 3, 101, 102, 103);
 
-console.log(numbers);
+//console.log(numbers);
+
+//concat
+
+const num1 = [1, 2, 3];
+const num2 = [4, 5, 6];
+const combinedNumbers = num1.concat(num2);
+console.log(combinedNumbers);
