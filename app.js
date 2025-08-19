@@ -78,7 +78,16 @@ console.log(flatedArray2);*/
 
 //join
 
-const fruits = ["apple", "orange", "banana"];
+/*const fruits = ["apple", "orange", "banana"];
 const fruitsNew = fruits.join('-');
 console.log(fruits);
-console.log(fruitsNew);
+console.log(fruitsNew);*/
+
+//indexOf
+
+const fruits = ["apple", "orange", "banana"];
+const index = fruits.indexOf("orange");
+console.log(index);
+
+const hasApple = fruits.includes("apple");
+console.log(hasApple);
