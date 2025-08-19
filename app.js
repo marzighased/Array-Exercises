@@ -169,7 +169,17 @@ console.log(nestedArray)*/
 
 // Array Destructuring
 
-const arr1= [1,2,3]
+/*const arr1= [1,2,3];
 const [a,b,c] = arr1;
 console.log(a)
-console.log(c)
+console.log(b)
+console.log(c)*/
+
+//... Rest Operator
+
+const arr1= [1,2,3,8,7,9,10];
+const [a,b,...rest] = arr1;
+console.log(a)
+console.log(b)
+console.log(rest)
+
