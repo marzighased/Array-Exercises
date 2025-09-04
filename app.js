@@ -177,9 +177,27 @@ console.log(c)*/
 
 //... Rest Operator
 
-const arr1= [1,2,3,8,7,9,10];
+/*const arr1= [1,2,3,8,7,9,10];
 const [a,b,...rest] = arr1;
 console.log(a)
 console.log(b)
 console.log(rest)
+*/
 
+// shopping list management
+
+const products = [ 'banana', 'apple', 'orange']
+let cart = [];
+do {
+let productName = prompt("enter name of the Product:")
+console.log(productName)
+
+if (productName === "exit") {
+  break;
+} else if (products.includes(productName)) {
+   cart.push(productName);
+   console.log("your cart includes:", cart)
+ } else {
+    alert("this name is not on the list!")
+ }
+} while(productName !== "exit")
