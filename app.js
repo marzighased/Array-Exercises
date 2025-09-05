@@ -185,7 +185,7 @@ console.log(rest)
 */
 
 // shopping list management
-
+/*
 const products = [ 'banana', 'apple', 'orange']
 let cart = [];
 do {
@@ -201,3 +201,23 @@ if (productName === "exit") {
     alert("this name is not on the list!")
  }
 } while(productName !== "exit")
+ */
+
+// customer queue manamgement
+
+const customers = []
+let input
+
+do {
+  input = parseInt(prompt('enter your choice:\n 1.add customer \n 2.remove customer \n 3.queue display \n 4.exit'))
+  switch (input) {
+          case 1:
+            let customerName = prompt('Enter customer Name:')
+            customers.push(customerName)
+            console.log('new customer added.')
+            break;
+          case 2:
+            customers.shift(customerName)
+            console.log('customer removed.')  
+  }         break;
+} while (input !==4);
