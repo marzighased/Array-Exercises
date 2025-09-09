@@ -265,5 +265,24 @@ do {
       let studentIndex = students.indexOf(studentPlace) 
       console.log('index of student:', studentIndex)
       break;
+    case 6:
+      students.sort();
+      console.log('sorted List:', students)  
+      break;
+    case 7:
+      students.reverse();
+      console.log('reversed List:', students)  
+      break;
+    case 8:
+      let newStudent = prompt('Enter new student Name:');
+      students.push(newStudent) 
+      console.log(newStudent, 'added to the class!') 
+      console.log('updated list:', students) 
+      break;
+    case 9:
+      console.log('goodbye!') 
+      break;
+    default:
+      console.log('invalid choice!')   
   }
 } while (input !==9);
