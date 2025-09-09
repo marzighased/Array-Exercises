@@ -217,7 +217,16 @@ do {
             console.log('new customer added.')
             break;
           case 2:
-            customers.shift(customerName)
+            customers.shift()
             console.log('customer removed.')  
-  }         break;
+           break;
+          case 3:
+            console.log('current queue:', customers)
+            break;
+          case 4:
+            console.log('Goodbye!') 
+            break;
+          default:
+            console.log('Invalid choice!') 
+  }  
 } while (input !==4);
