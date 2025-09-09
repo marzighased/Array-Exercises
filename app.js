@@ -233,7 +233,7 @@ do {
  */
 
 // students management list
-
+/*
 const students = ['sara','tom','erick','helen','jonas','jenny'];
 let input;
 
@@ -286,3 +286,15 @@ do {
       console.log('invalid choice!')   
   }
 } while (input !==9);
+ */
+
+// Products
+
+let electronics = ["mobile", "laptop", "tablet"]
+let accessories = ["charger", "headphone", "power bank"]
+
+let allProducts = [...electronics, ...accessories]
+console.log(allProducts)
+
+allProducts = ["smart watch", ...allProducts]
+console.log(allProducts)
