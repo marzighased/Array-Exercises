@@ -249,5 +249,11 @@ do {
       let studyGroup = students.slice(start,end);
       console.log('Study Group members:' ,studyGroup)
       break;
+    case 3:
+      let studentNum = parseInt(prompt('Enter student number:'));
+      let stuRemove = students.splice(studentNum, 1)  
+      console.log('Removed student:', stuRemove)
+      console.log('updated List:', students)
+      break;
   }
 } while (input !==9);
