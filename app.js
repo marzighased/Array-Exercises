@@ -204,7 +204,7 @@ if (productName === "exit") {
  */
 
 // customer queue manamgement
-
+/*
 const customers = []
 let input
 
@@ -230,3 +230,24 @@ do {
             console.log('Invalid choice!') 
   }  
 } while (input !==4);
+ */
+
+// students management list
+
+const students = ['sara','tom','erick','helen','jonas','jenny'];
+let input;
+
+do {
+  input = parseInt(prompt('enter your choice:\n 1.Display students List \n 2.make study group \n 3.remove student \n 4.search student \n 5.find student index \n 6.sort list \n 7.reverse list \n 8.add new student \n 9.exit'))
+  switch (input) {
+    case 1:
+      console.log(students)
+      break;
+    case 2:
+      let start = parseInt(prompt('Enter start index:'));
+      let end = parseInt(prompt('Enter end index:'));
+      let studyGroup = students.slice(start,end);
+      console.log('Study Group members:' ,studyGroup)
+      break;
+  }
+} while (input !==9);
