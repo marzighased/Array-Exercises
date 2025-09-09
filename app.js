@@ -255,5 +255,10 @@ do {
       console.log('Removed student:', stuRemove)
       console.log('updated List:', students)
       break;
+    case 4:
+      let studentName = prompt('Enter student Name:');
+      let isHere = students.includes(studentName)
+      console.log('student found:', isHere)
+      break;
   }
 } while (input !==9);
