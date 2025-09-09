@@ -260,5 +260,10 @@ do {
       let isHere = students.includes(studentName)
       console.log('student found:', isHere)
       break;
+    case 5:
+      let studentPlace = prompt('Enter student Name:'); 
+      let studentIndex = students.indexOf(studentPlace) 
+      console.log('index of student:', studentIndex)
+      break;
   }
 } while (input !==9);
