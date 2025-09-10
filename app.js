@@ -185,23 +185,25 @@ console.log(rest)
 */
 
 // shopping list management
-/*
+
 const products = [ 'banana', 'apple', 'orange']
 let cart = [];
-do {
-let productName = prompt("enter name of the Product:")
-console.log(productName)
 
-if (productName === "exit") {
-  break;
-} else if (products.includes(productName)) {
-   cart.push(productName);
-   console.log("your cart includes:", cart)
- } else {
-    alert("this name is not on the list!")
- }
-} while(productName !== "exit")
- */
+while (true) {
+  let productName = prompt("Enter Product name (or type 'exit' to finish):")
+
+  if (productName === null)
+    break;
+  if (productName === "exit")
+    break;
+  if (products.includes(productName)) {
+    cart.push(productName);
+    console.log("current cart:", cart);
+  } else {
+    alert("This product is not available!")
+  }
+}
+ 
 
 // customer queue manamgement
 /*
@@ -289,7 +291,7 @@ do {
  */
 
 // Products
-
+/*
 let electronics = ["mobile", "laptop", "tablet"]
 let accessories = ["charger", "headphone", "power bank"]
 
@@ -298,3 +300,4 @@ console.log(allProducts)
 
 allProducts = ["smart watch", ...allProducts]
 console.log(allProducts)
+*/
