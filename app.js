@@ -185,7 +185,7 @@ console.log(rest)
 */
 
 // shopping list management
-
+/*
 const products = [ 'banana', 'apple', 'orange']
 let cart = [];
 
@@ -204,35 +204,57 @@ while (true) {
   }
 }
  
-
+*/
 // customer queue manamgement
-/*
-const customers = []
-let input
+
+const customers = [];
+let input;
 
 do {
-  input = parseInt(prompt('enter your choice:\n 1.add customer \n 2.remove customer \n 3.queue display \n 4.exit'))
+  const raw = prompt('enter your choice:\n 1.add customer \n 2.remove customer \n 3.queue display \n 4.exit');
+  input = Number(raw);
+  
+  if (!Number.isInteger(input)) {
+    console.log('⚠️ Invalid choice!');
+    continue;
+  }
+  
   switch (input) {
-          case 1:
-            let customerName = prompt('Enter customer Name:')
-            customers.push(customerName)
-            console.log('new customer added.')
-            break;
-          case 2:
-            customers.shift()
-            console.log('customer removed.')  
-           break;
-          case 3:
-            console.log('current queue:', customers)
-            break;
-          case 4:
-            console.log('Goodbye!') 
-            break;
-          default:
-            console.log('Invalid choice!') 
-  }  
-} while (input !==4);
- */
+    case 1: {
+      const customerName = prompt('Enter customer Name:');
+      
+      if (customerName && customerName.trim() !== '') {
+        customers.push(customerName.trim());
+        console.log('✅ Customer added. Current queue:', customers);
+      } else {
+        console.log('⚠️ Invalid name!');
+      }
+      break;
+    }
+    
+    case 2: {
+      if (customers.length > 0) {
+        const served = customers.shift();
+        console.log('🧾 Customer served:', served, '| Current queue:', customers);
+      } else {
+        console.log('⚠️ Queue is empty!');
+      }
+      break;
+    }
+    
+    case 3:
+      console.log('📋 Current queue:', customers);
+      break;
+      
+    case 4:
+      console.log('👋 Goodbye!');
+      break;
+      
+    default:
+      console.log('⚠️ Invalid choice!');
+  }
+} while (input !== 4);
+ 
 
 // students management list
 /*
