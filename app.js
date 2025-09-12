@@ -206,7 +206,7 @@ while (true) {
  
 */
 // customer queue manamgement
-
+/*
 const customers = [];
 let input;
 
@@ -254,10 +254,10 @@ do {
       console.log('⚠️ Invalid choice!');
   }
 } while (input !== 4);
- 
+*/ 
 
 // students management list
-/*
+
 const students = ['sara','tom','erick','helen','jonas','jenny'];
 let input;
 
@@ -268,6 +268,10 @@ do {
       console.log(students)
       break;
     case 2:
+      if (students.length === 0) { 
+      console.log("list is Empty!"); 
+      break;
+      }
       let start = parseInt(prompt('Enter start index:'));
       let end = parseInt(prompt('Enter end index:'));
       let studyGroup = students.slice(start,end);
@@ -310,7 +314,6 @@ do {
       console.log('invalid choice!')   
   }
 } while (input !==9);
- */
 
 // Products
 /*
