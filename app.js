@@ -302,7 +302,11 @@ do {
       console.log('reversed List:', students)  
       break;
     case 8:
-      let newStudent = prompt('Enter new student Name:');
+      let newStudent = (prompt('Enter new student Name:') || '').trim();
+      if (!newStudent) {
+        console.log("Name cannot be empty!")
+        break;
+      }
       students.push(newStudent) 
       console.log(newStudent, 'added to the class!') 
       console.log('updated list:', students) 
