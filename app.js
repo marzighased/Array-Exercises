@@ -259,6 +259,15 @@ do {
 // students management list
 
 const students = ['sara','tom','erick','helen','jonas','jenny'];
+
+function printList(title = "students") {
+  console.log(`\n--- ${title} ---`);
+  for (let i = 0; i < students.length; i++) {
+    console.log(`${i}: ${students[i]}`);
+  }
+  console.log('----------------\n');
+}
+
 let input;
 
 do {
