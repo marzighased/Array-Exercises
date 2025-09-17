@@ -271,19 +271,32 @@ function printList(title = "students") {
 let input;
 
 do {
-  input = parseInt(prompt('enter your choice:\n 1.Display students List \n 2.make study group \n 3.remove student \n 4.search student \n 5.find student index \n 6.sort list \n 7.reverse list \n 8.add new student \n 9.exit'))
+  input = parseInt(prompt('enter your choice:\n 1.Display students List \n 2.make study group \n 3.remove student \n 4.search student \n 5.find student index \n 6.sort list \n 7.reverse list \n 8.add new student \n 9.exit'), 10)
+
   switch (input) {
-    case 1:
-      console.log(students)
+    case 1: { 
+      printList();
       break;
+    }  
     case 2:
       if (students.length === 0) { 
       console.log("list is Empty!"); 
       break;
       }
-      let start = parseInt(prompt('Enter start index:'));
-      let end = parseInt(prompt('Enter end index:'));
-      let studyGroup = students.slice(start,end);
+
+      let start = parseInt(prompt('Enter start index:'), 10);
+      let end = parseInt(prompt('Enter end index (not included):'), 10);
+
+      if (Number.isNaN(start) || Number.isNaN(end)) {
+        console.log("Invalid indices!");
+        break;
+      }
+      if (start < 0 || end < 0 || start >= students.length || end > students.length || start >= end) {
+        console.log("Indices out of range or start >= end!");
+        break;
+      }
+
+      const studyGroup = students.slice(start,end);
       console.log('Study Group members:' ,studyGroup)
       break;
     case 3:
