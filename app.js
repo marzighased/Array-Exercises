@@ -300,15 +300,37 @@ do {
       console.log('Study Group members:' ,studyGroup)
       break;
     case 3:
-      let studentNum = parseInt(prompt('Enter student number:'));
-      let stuRemove = students.splice(studentNum, 1)  
-      console.log('Removed student:', stuRemove)
-      console.log('updated List:', students)
+      if (students.length === 0) { 
+        console.log("List is empty!"); 
+        break; 
+      }
+      let idx = parseInt(prompt('Enter index to remove:'), 10);
+      if (Number.isNaN(idx)) { 
+        console.log("Invalid index!"); 
+        break; 
+      }
+      if (idx < 0 || idx >= students.length) {
+        console.log("Index out of range!");
+        break;
+      }
+      const removed = students.splice(idx, 1)  
+      console.log(`Removed student: ${removed[0]}`)
+      printList('updated List')
       break;
     case 4:
-      let studentName = prompt('Enter student Name:');
-      let isHere = students.includes(studentName)
-      console.log('student found:', isHere)
+      if (students.length === 0) { 
+        console.log("List is empty!"); 
+        break; 
+      }
+      
+      const name = (prompt('Enter student name:') || '').trim();
+      if (!name) { 
+        console.log("Name cannot be empty!"); 
+        break; 
+      }
+      
+      const found = students.includes(name);
+      console.log(found ? `Student "${name}" found.` : `Student "${name}" not found.`);
       break;
     case 5:
       let studentPlace = prompt('Enter student Name:'); 
