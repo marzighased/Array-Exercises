@@ -333,14 +333,34 @@ do {
       console.log(found ? `Student "${name}" found.` : `Student "${name}" not found.`);
       break;
     case 5:
-      let studentPlace = prompt('Enter student Name:'); 
-      let studentIndex = students.indexOf(studentPlace) 
-      console.log('index of student:', studentIndex)
+      if (students.length === 0) { 
+        console.log("List is empty!"); 
+        break; 
+      }
+      
+      const studentName = (prompt('Enter student name:') || '').trim();
+      if (!studentName) { 
+        console.log("Name cannot be empty!"); 
+        break; 
+      }
+      
+      const index = students.indexOf(studentName);
+      if (index === -1) {
+        console.log(`Student "${studentName}" not found.`);
+      } else {
+        console.log(`Index of "${studentName}": ${index}`);
+      }
       break;
     case 6:
+      if (students.length === 0) { 
+        console.log("List is empty!"); 
+        break; 
+      }
+      
       students.sort();
-      console.log('sorted List:', students)  
+      printList("sorted list");
       break;
+      
     case 7:
       students.reverse();
       console.log('reversed List:', students)  
