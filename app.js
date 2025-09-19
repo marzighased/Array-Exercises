@@ -362,9 +362,15 @@ do {
       break;
       
     case 7:
+      if (students.length === 0) { 
+        console.log("List is empty!"); 
+        break; 
+      }
+      
       students.reverse();
-      console.log('reversed List:', students)  
+      printList("reversed list");
       break;
+    
     case 8:
       let newStudent = (prompt('Enter new student Name:') || '').trim();
       if (!newStudent) {
