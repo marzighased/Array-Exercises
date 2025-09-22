@@ -377,10 +377,11 @@ do {
         console.log("Name cannot be empty!")
         break;
       }
-      students.push(newStudent) 
-      console.log(newStudent, 'added to the class!') 
-      console.log('updated list:', students) 
+      students.push(newStudent);
+      console.log(`"${newStudent}" added!`);
+      printList("updated list");
       break;
+    
     case 9:
       console.log('goodbye!') 
       break;
