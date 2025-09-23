@@ -255,7 +255,7 @@ do {
   }
 } while (input !== 4);
 */ 
-
+/*
 // students management list
 
 const students = ['sara','tom','erick','helen','jonas','jenny'];
@@ -401,3 +401,38 @@ console.log(allProducts)
 allProducts = ["smart watch", ...allProducts]
 console.log(allProducts)
 */
+
+// calculator
+
+
+const a = prompt('enter first Number:');
+const b = prompt('enter second Number:');
+const calc = prompt('choose Function: + - * /');
+
+if(calc === "+") {
+function add(a,b) {
+  alert(parseFloat(a) + parseFloat(b))
+}
+add(a,b);
+} else if (calc === "-") {
+
+function sub(a,b) {
+  alert(parseFloat(a) - parseFloat(b))
+}
+sub(a,b);
+} else if (calc === "*") {
+
+function multi(a,b) {
+  alert(parseFloat(a) * parseFloat(b))
+}
+multi(a,b);
+} else if (calc === "/") {
+
+function division(a,b) {
+  alert(parseFloat(a) / parseFloat(b)) 
+}
+division(a,b);
+}
+
+  
+    
