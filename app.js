@@ -435,6 +435,7 @@ division(a,b);
 }
 */
 
+/*
 // Even Numbers between 2 Numbers
 
 const a = parseInt(prompt("enter first Number:"));
@@ -447,3 +448,17 @@ for (let i = a; i <= b; i++) {
   }
 }
 alert(result);
+*/
+
+
+//adding numbers from our number
+
+const a = parseInt(prompt("enter your Number:"));
+let sum = 0;
+
+for (let i = 1; i <= a ; i++) {
+  
+  sum += i;
+}
+alert(sum);
+
