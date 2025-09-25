@@ -254,7 +254,7 @@ do {
       console.log('⚠️ Invalid choice!');
   }
 } while (input !== 4);
-*/ 
+*/
 /*
 // students management list
 
@@ -401,7 +401,7 @@ console.log(allProducts)
 allProducts = ["smart watch", ...allProducts]
 console.log(allProducts)
 */
-
+/*
 // calculator
 
 
@@ -433,6 +433,17 @@ function division(a,b) {
 }
 division(a,b);
 }
+*/
 
-  
-    
+// Even Numbers between 2 Numbers
+
+const a = parseInt(prompt("enter first Number:"));
+const b = parseInt(prompt("enter second Number:"));
+let result = "";
+
+for (let i = a; i <= b; i++) {
+  if (i % 2 === 0) {
+    result += i +"\n";
+  }
+}
+alert(result);
