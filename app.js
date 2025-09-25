@@ -450,7 +450,7 @@ for (let i = a; i <= b; i++) {
 alert(result);
 */
 
-
+/*
 //adding numbers from our number
 
 const a = parseInt(prompt("enter your Number:"));
@@ -461,4 +461,18 @@ for (let i = 1; i <= a ; i++) {
   sum += i;
 }
 alert(sum);
+*/
 
+// display biggest number
+
+const a = parseInt(prompt("enter first Number:"));
+const b = parseInt(prompt("enter second Number:"));
+const c = parseInt(prompt("enter third Number:"));
+
+if (a > b && a > c) {
+  alert(a);
+} else if (b > a && b > c) {
+  alert(b);
+} else {
+  alert(c);
+}
