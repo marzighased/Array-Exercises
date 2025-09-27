@@ -462,7 +462,7 @@ for (let i = 1; i <= a ; i++) {
 }
 alert(sum);
 */
-
+/*
 // display biggest number
 
 const a = parseInt(prompt("enter first Number:"));
@@ -476,3 +476,15 @@ if (a > b && a > c) {
 } else {
   alert(c);
 }
+*/
+
+//Multiplaying a number in a range
+
+const a = parseInt(prompt("enter the Number:"));
+const range = parseInt(prompt("enter range:"));
+let result = "";
+
+for (let i = 1; i <= range; i++) {
+  result += a + " × " + i + " = " + (a * i) + "\n";
+}
+alert(result);
