@@ -480,11 +480,27 @@ if (a > b && a > c) {
 
 //Multiplaying a number in a range
 
-const a = parseInt(prompt("enter the Number:"));
-const range = parseInt(prompt("enter range:"));
-let result = "";
+
+function showMultiplicationTable(numRaw, rangeRaw) {
+  const num = parseFloat(numRaw);
+  const range = parseFloat(rangeRaw);
+  
+  if (!Number.isFinite(num) || !Number.isFinite(range)) {
+    return "Error! please enter a valid number.";
+  }
+  
+  if (range < 1) {
+    return "Error! range should be equal 1 or bigger.";
+  }
+  
+  let result = "multiple table" + num + ":\n";
 
 for (let i = 1; i <= range; i++) {
-  result += a + " × " + i + " = " + (a * i) + "\n";
+  result += num + " × " + i + " = " + (num * i) + "\n";
 }
-alert(result);
+return(result);
+}
+
+const number = prompt("Enter a number:");
+const range = prompt("Enter range:");
+alert(showMultiplicationTable(number, range));
