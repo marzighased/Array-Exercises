@@ -462,22 +462,38 @@ for (let i = 1; i <= a ; i++) {
 }
 alert(sum);
 */
-/*
+
 // display biggest number
+
+function findLargestOfThree(num1Raw, num2Raw, num3Raw) {
+  const n1 = parseFloat(num1Raw);
+  const n2 = parseFloat(num2Raw);
+  const n3 = parseFloat(num3Raw);
+  
+  if (!Number.isFinite(n1) || !Number.isFinite(n2) || !Number.isFinite(n3)) {
+    return "Error! Enter valid Number.";
+  }
+  
+  let largest;
+  
+  if (n1 >= n2 && n1 >= n3) {
+    largest = n1;
+  } else if (n2 >= n1 && n2 >= n3) {
+    largest = n2;
+  } else {
+    largest = n3;
+  }
+  
+  return "the biggest Number: " + largest;
+}
 
 const a = parseInt(prompt("enter first Number:"));
 const b = parseInt(prompt("enter second Number:"));
 const c = parseInt(prompt("enter third Number:"));
 
-if (a > b && a > c) {
-  alert(a);
-} else if (b > a && b > c) {
-  alert(b);
-} else {
-  alert(c);
-}
-*/
 
+
+/*
 //Multiplaying a number in a range
 
 
@@ -504,3 +520,4 @@ return(result);
 const number = prompt("Enter a number:");
 const range = prompt("Enter range:");
 alert(showMultiplicationTable(number, range));
+*/
