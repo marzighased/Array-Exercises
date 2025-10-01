@@ -450,19 +450,32 @@ for (let i = a; i <= b; i++) {
 alert(result);
 */
 
-/*
+
 //adding numbers from our number
 
-const a = parseInt(prompt("enter your Number:"));
-let sum = 0;
-
-for (let i = 1; i <= a ; i++) {
+function calculateSumUpTo(numRaw) {
+  const n = parseFloat(numRaw);
   
-  sum += i;
+  if (!Number.isFinite(n)) {
+    return "Error! please enter valid number!";
+  }
+  
+  if (n < 1) {
+    return "Error! number should be bigger than 1";
+  }
+  
+  let sum = 0;
+  for (let i = 1; i <= n; i++) {
+    sum += i;
+  }
+  
+  return "the result from 1 to " + n + " is equal to: " + sum;
 }
-alert(sum);
-*/
 
+const number = prompt("enter your number:");
+alert(calculateSumUpTo(number));
+
+/*
 // display biggest number
 
 function findLargestOfThree(num1Raw, num2Raw, num3Raw) {
@@ -491,7 +504,7 @@ const a = prompt("enter first Number:");
 const b = prompt("enter second Number:");
 const c = prompt("enter third Number:");
 alert(findLargestOfThree(a, b, c));
-
+*/
 
 /*
 //Multiplaying a number in a range
