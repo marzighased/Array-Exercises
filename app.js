@@ -487,10 +487,10 @@ function findLargestOfThree(num1Raw, num2Raw, num3Raw) {
   return "the biggest Number: " + largest;
 }
 
-const a = parseInt(prompt("enter first Number:"));
-const b = parseInt(prompt("enter second Number:"));
-const c = parseInt(prompt("enter third Number:"));
-
+const a = prompt("enter first Number:");
+const b = prompt("enter second Number:");
+const c = prompt("enter third Number:");
+alert(findLargestOfThree(a, b, c));
 
 
 /*
