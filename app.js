@@ -435,22 +435,44 @@ division(a,b);
 }
 */
 
-/*
+
 // Even Numbers between 2 Numbers
 
-const a = parseInt(prompt("enter first Number:"));
-const b = parseInt(prompt("enter second Number:"));
-let result = "";
-
-for (let i = a; i <= b; i++) {
-  if (i % 2 === 0) {
-    result += i +"\n";
+function showEvenNumbersBetween(startRaw, endRaw) {
+  const start = parseFloat(startRaw);
+  const end = parseFloat(endRaw);
+  
+  if (!Number.isFinite(start) || !Number.isFinite(end)) {
+    return "Enter valid number!";
   }
+  
+  if (start > end) {
+    return "Error! first number should be smaller than second number.";
+  }
+  
+  let result = "even numbers:\n";
+  let hasEven = false;
+  
+  for (let i = Math.ceil(start); i <= end; i++) {
+    if (i % 2 === 0) {
+      result += i + "\n";
+      hasEven = true;
+    }
+  }
+  
+  if (!hasEven) {
+    return "there is not any even number in this range";
+  }
+  
+  return result;
 }
-alert(result);
-*/
+
+const num1 = prompt("first number:");
+const num2 = prompt("second number:");
+alert(showEvenNumbersBetween(num1, num2));
 
 
+/*
 //adding numbers from our number
 
 function calculateSumUpTo(numRaw) {
